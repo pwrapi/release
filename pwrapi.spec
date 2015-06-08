@@ -5,8 +5,8 @@ Summary:	Power API reference implementation
 
 Group:		Development/Libraries
 License:	GPLv2+
-URL:		powerapi.sandia.gov
-Source0:	pwrapi-%{version}.tgz
+URL:		http://github.com/pwrapi/release
+Source0:	pwrapi-ref-%{version}.tgz
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 BuildRequires:	autoconf
