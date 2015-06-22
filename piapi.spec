@@ -49,6 +49,8 @@ rm -rf %{buildroot}
 Summary: PowerInsight API devel package
 Group: Development/Libraries
 Requires:  piapi
+BuildRequires: python-devel
+BuildRequires: swig
 %description devel
 This is a development package of the PowerInsight API.
 Users who want to implement their own plugins must install this
