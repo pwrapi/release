@@ -52,8 +52,6 @@ rm -rf %{buildroot}
 Summary: Power API devel package
 Group: Development/Libraries
 Requires:  pwrapi-ref
-BuildRequires: python-devel
-BuildRequires: swig
 %description devel
 This is a development package of the Power API.
 Users who want to implement their own plugins must install this
