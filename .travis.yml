@@ -1,0 +1,31 @@
+sudo: true
+language: c
+compiler:
+    - gcc
+os:
+    - linux
+before_install:
+install:
+        - git clone https://github.com/pwrapi/release
+        - cd release
+        - mkdir rpmbuild
+        - mkdir BUILD BUILDROOT RPMS SOURCES SPECS SRPMS
+        - cp pwrapi-ref-1.1.1.tgz rpmbuild/SOURCES
+        - cp piapi-ref-2.1.1.tgz rpmbuild/SOURCES
+        - cp pwrapi-ref.spec rpmbuild/SPECS
+        - cp piapi.spec rpmbuild/SPECS
+        - cd SPECS
+        - rpmbuild -v -ba pwrapi-ref.spec
+        - rpmbuild -v -ba piapi.spec
+script:
+        - export POWERAPI_CONFIG=/usr/share/doc/pwrapi/examples/config/dummySystem.xml
+        - export POWERAPI_ROOT=plat
+        - pwrapi -a P -t P
+    	- piver
+        - pinative -s 100 -f 100
+notifications:
+    email:
+        recipients:
+            - ddeboni@sandia.gov
+        on_success: [change]
+        on_failure: [always] 
