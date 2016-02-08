@@ -11,7 +11,7 @@ install:
         - mkdir rpmbuild
         - mkdir BUILD BUILDROOT RPMS SOURCES SPECS SRPMS
         - cp pwrapi-ref-1.1.1.tgz rpmbuild/SOURCES
-        - cp piapi-ref-2.1.1.tgz rpmbuild/SOURCES
+        - cp piapi-2.1.1.tgz rpmbuild/SOURCES
         - cp pwrapi-ref.spec rpmbuild/SPECS
         - cp piapi.spec rpmbuild/SPECS
         - cd SPECS
