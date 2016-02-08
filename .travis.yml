@@ -9,12 +9,13 @@ install:
         - git clone https://github.com/pwrapi/release
         - cd release
         - mkdir rpmbuild
+        - cd rpmbuild
         - mkdir BUILD BUILDROOT RPMS SOURCES SPECS SRPMS
-        - cp pwrapi-ref-1.1.1.tgz rpmbuild/SOURCES
-        - cp piapi-2.1.1.tgz rpmbuild/SOURCES
-        - cp pwrapi-ref.spec rpmbuild/SPECS
-        - cp piapi.spec rpmbuild/SPECS
-        - cd rpmbuild/SPECS
+        - cp ../pwrapi-ref-1.1.1.tgz SOURCES
+        - cp ../piapi-2.1.1.tgz SOURCES
+        - cp ../pwrapi-ref.spec SPECS
+        - cp ../piapi.spec SPECS
+        - cd SPECS
         - rpmbuild -v -ba pwrapi-ref.spec
         - rpmbuild -v -ba piapi.spec
 script:
