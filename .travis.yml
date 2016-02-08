@@ -7,7 +7,7 @@ os:
 before_install:
         - sudo apt-get install rpm
 install:
-        - git clone https://github.com/pwrapi/release
+        - git clone https://github.com/pwrapi/release ${HOME}/release
         - mkdir ${HOME}/rpmbuild
         - cd ${HOME}/rpmbuild
         - mkdir BUILD BUILDROOT RPMS SOURCES SPECS SRPMS
