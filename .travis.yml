@@ -5,7 +5,7 @@ compiler:
 os:
     - linux
 before_install:
-        - sudo apt-get install alien dpkg-dev debhelper build-essential
+        - sudo apt-get install dpkg-dev debhelper build-essential
 install:
         - git clone https://github.com/pwrapi/release
         - cd release
