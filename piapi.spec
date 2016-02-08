@@ -68,7 +68,6 @@ Examples and man for PowerInsight API.
 %files doc
 %defattr(-,root,root)
 %{_mandir}/*/*
-%{_datadir}/doc/*/*/*
 %docdir %{_defaultdocdir}
 
 %changelog
