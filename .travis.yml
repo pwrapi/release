@@ -21,6 +21,7 @@ install:
         - rpmbuild -v -ba pwrapi-ref.spec
         - rpmbuild -v -ba piapi.spec
 script:
+        - echo "NO NEED TO TEST TOOLS SINCE EACH REPO ALREADY DOES"
 notifications:
     email:
         recipients:
