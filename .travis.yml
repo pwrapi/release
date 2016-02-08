@@ -16,6 +16,8 @@ install:
         - cp ${HOME}/release/pwrapi-ref.spec SPECS
         - cp ${HOME}/release/piapi.spec SPECS
         - cd ${HOME}/rpmbuild/SPECS
+        - sed -i.bak '/BuildRequires/d' pwrapi-ref.spec
+        - sed -i.bak '/BuildRequires/d' piapi.spec
         - rpmbuild -v -ba pwrapi-ref.spec
         - rpmbuild -v -ba piapi.spec
 script:
