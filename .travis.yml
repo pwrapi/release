@@ -17,8 +17,8 @@ install:
         - cp ../pwrapi-ref.spec SPECS
         - cp ../piapi.spec SPECS
         - cd SPECS
-        - dpkg-buildpackage -v -ba pwrapi-ref.spec
-        - dpkg-buildpackage -v -ba piapi.spec
+        - dpkg-buildpackage pwrapi-ref.spec
+        - dpkg-buildpackage piapi.spec
 script:
         - export POWERAPI_CONFIG=/usr/share/doc/pwrapi/examples/config/dummySystem.xml
         - export POWERAPI_ROOT=plat
