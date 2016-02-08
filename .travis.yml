@@ -21,11 +21,6 @@ install:
         - rpmbuild -v -ba pwrapi-ref.spec
         - rpmbuild -v -ba piapi.spec
 script:
-        - export POWERAPI_CONFIG=/usr/share/doc/pwrapi/examples/config/dummySystem.xml
-        - export POWERAPI_ROOT=plat
-        - pwrapi -a P -t P
-        - piver
-        - pinative -s 100 -f 100
 notifications:
     email:
         recipients:
