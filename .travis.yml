@@ -21,7 +21,7 @@ script:
         - export POWERAPI_CONFIG=/usr/share/doc/pwrapi/examples/config/dummySystem.xml
         - export POWERAPI_ROOT=plat
         - pwrapi -a P -t P
-    	- piver
+        - piver
         - pinative -s 100 -f 100
 notifications:
     email:
