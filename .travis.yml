@@ -14,7 +14,7 @@ install:
         - cp piapi-2.1.1.tgz rpmbuild/SOURCES
         - cp pwrapi-ref.spec rpmbuild/SPECS
         - cp piapi.spec rpmbuild/SPECS
-        - cd SPECS
+        - cd rpmbuild/SPECS
         - rpmbuild -v -ba pwrapi-ref.spec
         - rpmbuild -v -ba piapi.spec
 script:
