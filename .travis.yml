@@ -5,6 +5,7 @@ compiler:
 os:
     - linux
 before_install:
+        - sudo apt-get install alien dpkg-dev debhelper build-essential
 install:
         - git clone https://github.com/pwrapi/release
         - cd release
@@ -16,8 +17,8 @@ install:
         - cp ../pwrapi-ref.spec SPECS
         - cp ../piapi.spec SPECS
         - cd SPECS
-        - rpmbuild -v -ba pwrapi-ref.spec
-        - rpmbuild -v -ba piapi.spec
+        - sudo rpmbuild -v -ba pwrapi-ref.spec
+        - sudo rpmbuild -v -ba piapi.spec
 script:
         - export POWERAPI_CONFIG=/usr/share/doc/pwrapi/examples/config/dummySystem.xml
         - export POWERAPI_ROOT=plat
