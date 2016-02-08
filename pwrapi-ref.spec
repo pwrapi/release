@@ -44,7 +44,6 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %{_libdir}/*
-/usr/lib/python2.6/site-packages/*
 %{_bindir}/*
 
 # devel
