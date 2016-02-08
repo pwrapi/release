@@ -5,7 +5,7 @@ compiler:
 os:
     - linux
 before_install:
-        - sudo apt-get install rpm autoconf automake libtool
+        - sudo apt-get install rpm
 install:
         - git clone https://github.com/pwrapi/release ${HOME}/release
         - mkdir ${HOME}/rpmbuild
