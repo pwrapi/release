@@ -7,15 +7,12 @@ os:
 before_install:
         - sudo apt-get install rpm
 install:
-        - git clone https://github.com/pwrapi/release ${HOME}/release
-        - mkdir ${HOME}/rpmbuild
-        - cd ${HOME}/rpmbuild
         - mkdir BUILD BUILDROOT RPMS SOURCES SPECS SRPMS
-        - cp ${HOME}/release/pwrapi-ref-1.1.1.tgz SOURCES
-        - cp ${HOME}/release/piapi-2.1.1.tgz SOURCES
-        - cp ${HOME}/release/pwrapi-ref.spec SPECS
-        - cp ${HOME}/release/piapi.spec SPECS
-        - cd ${HOME}/rpmbuild/SPECS
+        - cp pwrapi-ref-1.1.1.tgz SOURCES
+        - cp piapi-2.1.1.tgz SOURCES
+        - cp pwrapi-ref.spec SPECS
+        - cp piapi.spec SPECS
+        - cd SPECS
         - sed -i.bak '/BuildRequires/d' pwrapi-ref.spec
         - sed -i.bak '/BuildRequires/d' piapi.spec
         - rpmbuild -v -ba pwrapi-ref.spec
